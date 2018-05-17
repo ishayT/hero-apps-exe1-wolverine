@@ -17,6 +17,7 @@
 
 // an array of Heroes in case there will be more then one hero in the future
 @property (strong, nonatomic) NSMutableArray<Hero *> *heroesGlobal;
+@property (strong, nonatomic) NSMutableArray<Movie *> *moviesGlobal;
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewDetailes;
@@ -120,27 +121,13 @@
                NSLog(@"%@", heroesLocal);
                
                self.heroesGlobal = heroesLocal;
+               self.moviesGlobal = moviesArr;
                
                dispatch_async(dispatch_get_main_queue(),^{
                    [self.tableViewMovies reloadData];
                    [self.tableViewDetailes reloadData];
-                   self.navigationItem.title = hero.actorName;
+                   self.navigationItem.title = hero.name;
                });
-               
-               
-//               NSDictionary *heroDict = heroJSON[0];
-//
-//               NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-//               NSLog(@"%@",dataDictionary);
-//               _ccStatus = [NSMutableArray array];
-//               CCStatus *status = [CCStatu statuWithTitle:dataDictionary[@"gelen"]];
-//               status.cevap = dataDictionary[@"cevap"];
-               
-//               for (NSDictionary *heroDict in heroJSON[0]) {
-//                   NSString *name = heroDict[@"name"];
-//                   Hero *hero = Hero.new;
-//                   hero.name = name;
-//               }
                
                
            }]resume];
@@ -169,15 +156,19 @@
         static NSString *cellDetailes = @"cellForDetailes";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellDetailes];
         
-        
         return cell;
     }
     else
          {
-            static NSString *cellMovies = @"cellForMovies";
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellMovies];
-            
-            return cell;
+             
+             static NSString *cellMovies = @"cellForMovies";
+             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellMovies];
+             
+             cell.textLabel.text = _moviesGlobal[indexPath.row].nameOfMovie;
+             cell.detailTextLabel.text = [_moviesGlobal[indexPath.row].yearOfPublish stringValue];
+             
+             return cell;
+             
         }
 
 }

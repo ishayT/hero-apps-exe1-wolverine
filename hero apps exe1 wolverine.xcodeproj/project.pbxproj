@@ -109,13 +109,10 @@
 		D7E466CB20AC220000DCA7B9 /* hero apps exe1 wolverine */ = {
 			isa = PBXGroup;
 			children = (
-				D7E466CC20AC220000DCA7B9 /* AppDelegate.h */,
-				D7E466CD20AC220000DCA7B9 /* AppDelegate.m */,
-				D7E466CF20AC220000DCA7B9 /* ViewController.h */,
-				D7E466D020AC220000DCA7B9 /* ViewController.m */,
-				D7E466D220AC220000DCA7B9 /* Main.storyboard */,
+				D7E4670920AE030F00DCA7B9 /* Model */,
+				D7E4670820AE030100DCA7B9 /* Controller */,
+				D7E4670720ADFF5C00DCA7B9 /* View */,
 				D7E466D820AC220000DCA7B9 /* Assets.xcassets */,
-				D7E466DA20AC220000DCA7B9 /* LaunchScreen.storyboard */,
 				D7E466DD20AC220000DCA7B9 /* Info.plist */,
 				D7E466DE20AC220000DCA7B9 /* main.m */,
 				D7E466D520AC220000DCA7B9 /* hero_apps_exe1_wolverine.xcdatamodeld */,
@@ -143,6 +140,33 @@
 				D7E466F520AC220100DCA7B9 /* Info.plist */,
 			);
 			path = "hero apps exe1 wolverineUITests";
+			sourceTree = "<group>";
+		};
+		D7E4670720ADFF5C00DCA7B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7E466D220AC220000DCA7B9 /* Main.storyboard */,
+				D7E466DA20AC220000DCA7B9 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7E4670820AE030100DCA7B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7E466CC20AC220000DCA7B9 /* AppDelegate.h */,
+				D7E466CD20AC220000DCA7B9 /* AppDelegate.m */,
+				D7E466CF20AC220000DCA7B9 /* ViewController.h */,
+				D7E466D020AC220000DCA7B9 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7E4670920AE030F00DCA7B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
