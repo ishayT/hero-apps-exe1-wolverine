@@ -16,6 +16,8 @@
 		D7E466DF20AC220000DCA7B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E466DE20AC220000DCA7B9 /* main.m */; };
 		D7E466E920AC220100DCA7B9 /* hero_apps_exe1_wolverineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E466E820AC220100DCA7B9 /* hero_apps_exe1_wolverineTests.m */; };
 		D7E466F420AC220100DCA7B9 /* hero_apps_exe1_wolverineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E466F320AC220100DCA7B9 /* hero_apps_exe1_wolverineUITests.m */; };
+		D7E4670320ACBF9F00DCA7B9 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4670220ACBF9F00DCA7B9 /* Hero.m */; };
+		D7E4670620ADB8E700DCA7B9 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4670520ADB8E700DCA7B9 /* Movie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		D7E466EF20AC220100DCA7B9 /* hero apps exe1 wolverineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hero apps exe1 wolverineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E466F320AC220100DCA7B9 /* hero_apps_exe1_wolverineUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hero_apps_exe1_wolverineUITests.m; sourceTree = "<group>"; };
 		D7E466F520AC220100DCA7B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E4670120ACBF9F00DCA7B9 /* Hero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		D7E4670220ACBF9F00DCA7B9 /* Hero.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
+		D7E4670420ADB8E700DCA7B9 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		D7E4670520ADB8E700DCA7B9 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,10 @@
 				D7E466DD20AC220000DCA7B9 /* Info.plist */,
 				D7E466DE20AC220000DCA7B9 /* main.m */,
 				D7E466D520AC220000DCA7B9 /* hero_apps_exe1_wolverine.xcdatamodeld */,
+				D7E4670120ACBF9F00DCA7B9 /* Hero.h */,
+				D7E4670220ACBF9F00DCA7B9 /* Hero.m */,
+				D7E4670420ADB8E700DCA7B9 /* Movie.h */,
+				D7E4670520ADB8E700DCA7B9 /* Movie.m */,
 			);
 			path = "hero apps exe1 wolverine";
 			sourceTree = "<group>";
@@ -268,6 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E4670620ADB8E700DCA7B9 /* Movie.m in Sources */,
+				D7E4670320ACBF9F00DCA7B9 /* Hero.m in Sources */,
 				D7E466D120AC220000DCA7B9 /* ViewController.m in Sources */,
 				D7E466CE20AC220000DCA7B9 /* AppDelegate.m in Sources */,
 				D7E466DF20AC220000DCA7B9 /* main.m in Sources */,
@@ -436,6 +448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "hero apps exe1 wolverine/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ishay.hero-apps-exe1-wolverine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,6 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "hero apps exe1 wolverine/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ishay.hero-apps-exe1-wolverine";
 				PRODUCT_NAME = "$(TARGET_NAME)";

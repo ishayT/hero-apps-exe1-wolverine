@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *heroDetailesTableView;
+@property (weak, nonatomic) IBOutlet UIImageView *heroImage;
+@property (weak, nonatomic) IBOutlet UILabel *moviesLabel;
+@property (weak, nonatomic) IBOutlet UITableView *moviesTableView;
+
 
 @end
 
