@@ -10,6 +10,7 @@
 #import "Hero.h"
 #import "Movie.h"
 #import "FullImageViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>{
     
@@ -34,8 +35,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self fetchHeroUsingJSON];
+    _heroImage.layer.cornerRadius = _heroImage.bounds.size.height / 2;
+    _heroImage.clipsToBounds = YES;
     
+    [self fetchHeroUsingJSON];
 }
 
 

@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *fullSizeImageOutlet;
 
 
+- (IBAction)handlePinch:(UIGestureRecognizer *)sender;
+
 @end

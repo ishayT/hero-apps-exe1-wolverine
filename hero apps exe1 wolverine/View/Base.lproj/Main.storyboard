@@ -196,16 +196,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-Gb-wap">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-Gb-wap">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cva-sU-zX8" appends="YES" id="c35-nK-EV0"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fyP-Gb-wap" firstAttribute="top" secondItem="5el-MY-6pV" secondAttribute="top" id="BCY-yP-SCu"/>
-                            <constraint firstItem="fyP-Gb-wap" firstAttribute="bottom" secondItem="5el-MY-6pV" secondAttribute="bottom" id="kMO-nK-31Y"/>
-                            <constraint firstItem="fyP-Gb-wap" firstAttribute="leading" secondItem="5el-MY-6pV" secondAttribute="leading" id="oy7-fx-rOX"/>
-                            <constraint firstItem="fyP-Gb-wap" firstAttribute="trailing" secondItem="5el-MY-6pV" secondAttribute="trailing" id="wTL-7p-s4h"/>
+                            <constraint firstItem="fyP-Gb-wap" firstAttribute="leading" secondItem="5el-MY-6pV" secondAttribute="leading" id="KVd-O4-XtP"/>
+                            <constraint firstItem="fyP-Gb-wap" firstAttribute="top" secondItem="5el-MY-6pV" secondAttribute="top" id="NaS-pB-dTh"/>
+                            <constraint firstItem="fyP-Gb-wap" firstAttribute="trailing" secondItem="5el-MY-6pV" secondAttribute="trailing" id="skp-fA-PRg"/>
+                            <constraint firstItem="fyP-Gb-wap" firstAttribute="bottom" secondItem="5el-MY-6pV" secondAttribute="bottom" id="tC8-8h-dNp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5el-MY-6pV"/>
                     </view>
@@ -214,6 +218,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5I-Wx-sl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="cva-sU-zX8">
+                    <connections>
+                        <action selector="handlePinch:" destination="UlW-YR-BUL" id="nCG-he-p4C"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1286.9565217391305" y="116.57608695652175"/>
         </scene>
