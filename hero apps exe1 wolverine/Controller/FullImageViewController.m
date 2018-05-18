@@ -23,7 +23,7 @@
     // Do any additional setup after loading the view.
     
     
-    
+    fullSizeImageOutlet.image = fullSizeImage;
 }
 
 - (void)didReceiveMemoryWarning {

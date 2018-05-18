@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Hero.h"
 #import "Movie.h"
+#import "FullImageViewController.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>{
     
@@ -142,11 +143,18 @@
    
 }
 
-
+// tapping on the image will send it to the next view
 -(void)tapDetected{
     NSLog(@"*****tapped On THE Image view*****");
      
     [self performSegueWithIdentifier:@"sagueToImage" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    FullImageViewController *fullImageController;
+    fullImageController = [segue destinationViewController];
+    fullImageController.fullSizeImage = self.heroImage.image;
 }
 
 
@@ -167,10 +175,6 @@
          return cell;
 
 }
-
-
-
-
 
 
 
