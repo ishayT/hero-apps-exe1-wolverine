@@ -20,7 +20,7 @@
 @property (strong, nonatomic) NSMutableArray<Movie *> *moviesGlobal;
 
 
-@property (weak, nonatomic) IBOutlet UITableView *tableViewDetailes;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMovies;
 
 
@@ -28,32 +28,30 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    //MARK:- need to make this the name of wolverine and the titles to big and center
-    self.navigationItem.title = @"Hero";
-    
     
     [self fetchHeroUsingJSON];
     
 }
 
+
 - (void)fetchHeroUsingJSON {
     NSLog(@"Fetching courses...");
     
-    NSString *urlString = @"https://heroapps.co.il/employee-tests/ios/logan.json";
-    NSURL *url = [NSURL URLWithString:urlString];
+    NSString *urlJSONString = @"https://heroapps.co.il/employee-tests/ios/logan.json";
+    NSURL *urlJSON = [NSURL URLWithString:urlJSONString];
     
-    [[NSURLSession.sharedSession dataTaskWithURL:url
+    [[NSURLSession.sharedSession dataTaskWithURL:urlJSON
            completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                NSLog(@"finished fetching the hero data");
                
                NSError *err;
                
                NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
-               NSLog(@"%@",jsonDict);
+//               NSLog(@"%@",jsonDict);
                
                if (err) {
                    NSLog(@"Failed To Serialize int JSON: %@", err);
@@ -81,12 +79,9 @@
 
                    [stringOfPowersArray appendString: power];
                    
-                   if(i == powersJSON.count - 1){
-                       //do nothing
-                   } else {
+                   if(i < powersJSON.count - 1){
                        [stringOfPowersArray appendString: @", "];
                    }
-                
                    
                }
                //*********************************************//
@@ -107,7 +102,7 @@
                //*********************************************//
                
                
-               
+               //creating a single hero and appending it to the heros array
                Hero *hero = Hero.new;
                hero.actorName = actorName;
                hero.name = name;
@@ -118,58 +113,58 @@
                hero.moviesArr = moviesArr;
                [heroesLocal addObject:hero];
                
-               NSLog(@"%@", heroesLocal);
                
+               //populating the global arrays with the local one's
                self.heroesGlobal = heroesLocal;
                self.moviesGlobal = moviesArr;
+      
                
+               // using async thread to make sure that all the tables populated on time and not blocking the main thread
                dispatch_async(dispatch_get_main_queue(),^{
                    [self.tableViewMovies reloadData];
-                   [self.tableViewDetailes reloadData];
                    self.navigationItem.title = hero.name;
+                   self.nickNameDetail.text = hero.nickName;
+                   self.yearBornDetail.text = [hero.yearBorn stringValue];
+                   self.powersDetail.text = hero.powersArr;
+                   self.originalActorDetail.text = hero.actorName;
+                   
+                   self.heroImage.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL ]]];
                });
-               
                
            }]resume];
     
     
+    //Add a tap gesture to the imageView
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
+    singleTap.numberOfTapsRequired = 1;
+    [_heroImage setUserInteractionEnabled:YES];
+    [_heroImage addGestureRecognizer:singleTap];
+   
+}
+
+
+-(void)tapDetected{
+    NSLog(@"*****tapped On THE Image view*****");
+     
+    [self performSegueWithIdentifier:@"sagueToImage" sender:self];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableView == _tableViewDetailes) {
-        return 4;
-    }
-    else
-        if (tableView == _tableViewMovies) {
-            return _heroesGlobal[0].moviesArr.count;
-        }
-    return -1;
+        return _heroesGlobal[0].moviesArr.count;
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
+         static NSString *cellMovies = @"cellForMovies";
+         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellMovies];
     
+         cell.textLabel.text = _moviesGlobal[indexPath.row].nameOfMovie;
+         cell.detailTextLabel.text = [_moviesGlobal[indexPath.row].yearOfPublish stringValue];
     
-    if (tableView == _tableViewDetailes) {
-        static NSString *cellDetailes = @"cellForDetailes";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellDetailes];
-        
-        return cell;
-    }
-    else
-         {
-             
-             static NSString *cellMovies = @"cellForMovies";
-             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellMovies];
-             
-             cell.textLabel.text = _moviesGlobal[indexPath.row].nameOfMovie;
-             cell.detailTextLabel.text = [_moviesGlobal[indexPath.row].yearOfPublish stringValue];
-             
-             return cell;
-             
-        }
+         return cell;
 
 }
 

@@ -18,6 +18,7 @@
 		D7E466F420AC220100DCA7B9 /* hero_apps_exe1_wolverineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E466F320AC220100DCA7B9 /* hero_apps_exe1_wolverineUITests.m */; };
 		D7E4670320ACBF9F00DCA7B9 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4670220ACBF9F00DCA7B9 /* Hero.m */; };
 		D7E4670620ADB8E700DCA7B9 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4670520ADB8E700DCA7B9 /* Movie.m */; };
+		D7E4670C20AED56300DCA7B9 /* FullImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4670B20AED56300DCA7B9 /* FullImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		D7E4670220ACBF9F00DCA7B9 /* Hero.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
 		D7E4670420ADB8E700DCA7B9 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		D7E4670520ADB8E700DCA7B9 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		D7E4670A20AED56300DCA7B9 /* FullImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullImageViewController.h; sourceTree = "<group>"; };
+		D7E4670B20AED56300DCA7B9 /* FullImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				D7E466CD20AC220000DCA7B9 /* AppDelegate.m */,
 				D7E466CF20AC220000DCA7B9 /* ViewController.h */,
 				D7E466D020AC220000DCA7B9 /* ViewController.m */,
+				D7E4670A20AED56300DCA7B9 /* FullImageViewController.h */,
+				D7E4670B20AED56300DCA7B9 /* FullImageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				D7E4670320ACBF9F00DCA7B9 /* Hero.m in Sources */,
 				D7E466D120AC220000DCA7B9 /* ViewController.m in Sources */,
 				D7E466CE20AC220000DCA7B9 /* AppDelegate.m in Sources */,
+				D7E4670C20AED56300DCA7B9 /* FullImageViewController.m in Sources */,
 				D7E466DF20AC220000DCA7B9 /* main.m in Sources */,
 				D7E466D720AC220000DCA7B9 /* hero_apps_exe1_wolverine.xcdatamodeld in Sources */,
 			);
