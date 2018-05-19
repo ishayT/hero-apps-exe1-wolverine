@@ -44,7 +44,7 @@
         fullSizeImageOutlet.transform = CGAffineTransformMakeScale(lastScaleFactor + (factor -1), lastScaleFactor + (factor -1));
         
     } else {    //zooming out
-        fullSizeImageOutlet.transform = CGAffineTransformMakeScale(lastScaleFactor * factor -1, lastScaleFactor * factor);
+        fullSizeImageOutlet.transform = CGAffineTransformMakeScale(lastScaleFactor * factor, lastScaleFactor * factor);
         
     }
     

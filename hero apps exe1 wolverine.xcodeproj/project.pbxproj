@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7864F5920B00D7E0015C82D /* MoviesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7864F5720B00D7E0015C82D /* MoviesTableViewCell.m */; };
+		D7864F5A20B00D7E0015C82D /* MoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7864F5820B00D7E0015C82D /* MoviesTableViewCell.xib */; };
 		D7E466CE20AC220000DCA7B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E466CD20AC220000DCA7B9 /* AppDelegate.m */; };
 		D7E466D120AC220000DCA7B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E466D020AC220000DCA7B9 /* ViewController.m */; };
 		D7E466D420AC220000DCA7B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E466D220AC220000DCA7B9 /* Main.storyboard */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7864F5620B00D7E0015C82D /* MoviesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesTableViewCell.h; sourceTree = "<group>"; };
+		D7864F5720B00D7E0015C82D /* MoviesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewCell.m; sourceTree = "<group>"; };
+		D7864F5820B00D7E0015C82D /* MoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewCell.xib; sourceTree = "<group>"; };
 		D7E466C920AC220000DCA7B9 /* hero apps exe1 wolverine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hero apps exe1 wolverine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E466CC20AC220000DCA7B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7E466CD20AC220000DCA7B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +128,9 @@
 				D7E4670220ACBF9F00DCA7B9 /* Hero.m */,
 				D7E4670420ADB8E700DCA7B9 /* Movie.h */,
 				D7E4670520ADB8E700DCA7B9 /* Movie.m */,
+				D7864F5620B00D7E0015C82D /* MoviesTableViewCell.h */,
+				D7864F5720B00D7E0015C82D /* MoviesTableViewCell.m */,
+				D7864F5820B00D7E0015C82D /* MoviesTableViewCell.xib */,
 			);
 			path = "hero apps exe1 wolverine";
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 			files = (
 				D7E466DC20AC220000DCA7B9 /* LaunchScreen.storyboard in Resources */,
 				D7E466D920AC220000DCA7B9 /* Assets.xcassets in Resources */,
+				D7864F5A20B00D7E0015C82D /* MoviesTableViewCell.xib in Resources */,
 				D7E466D420AC220000DCA7B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +322,7 @@
 				D7E466CE20AC220000DCA7B9 /* AppDelegate.m in Sources */,
 				D7E4670C20AED56300DCA7B9 /* FullImageViewController.m in Sources */,
 				D7E466DF20AC220000DCA7B9 /* main.m in Sources */,
+				D7864F5920B00D7E0015C82D /* MoviesTableViewCell.m in Sources */,
 				D7E466D720AC220000DCA7B9 /* hero_apps_exe1_wolverine.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

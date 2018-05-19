@@ -10,7 +10,9 @@
 #import "Hero.h"
 #import "Movie.h"
 #import "FullImageViewController.h"
+#import "MoviesTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
+
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>{
     
@@ -169,13 +171,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
-         static NSString *cellMovies = @"cellForMovies";
-         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellMovies];
+    MoviesTableViewCell *movieCell = [tableView dequeueReusableCellWithIdentifier:@"movieCell"];
     
-         cell.textLabel.text = _moviesGlobal[indexPath.row].nameOfMovie;
-         cell.detailTextLabel.text = [_moviesGlobal[indexPath.row].yearOfPublish stringValue];
+    if (!movieCell) {
+        [tableView registerNib:[UINib nibWithNibName:@"MoviesTableViewCell" bundle:nil] forCellReuseIdentifier:@"movieCell"];
+        
+        movieCell = [tableView dequeueReusableCellWithIdentifier:@"movieCell"];
+    }
     
-         return cell;
+    
+    
+//         static NSString *cellMovies = @"cellForMovies";
+//         UITableViewCell *cell =
+    
+         movieCell.nameOfMovie.text = _moviesGlobal[indexPath.row].nameOfMovie;
+         movieCell.yearOfMovie.text = [_moviesGlobal[indexPath.row].yearOfPublish stringValue];
+    
+         return movieCell;
 
 }
 
