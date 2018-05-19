@@ -177,17 +177,13 @@
         [tableView registerNib:[UINib nibWithNibName:@"MoviesTableViewCell" bundle:nil] forCellReuseIdentifier:@"movieCell"];
         
         movieCell = [tableView dequeueReusableCellWithIdentifier:@"movieCell"];
+        
     }
     
+        movieCell.nameOfMovie.text = _moviesGlobal[indexPath.row].nameOfMovie;
+        movieCell.yearOfMovie.text = [_moviesGlobal[indexPath.row].yearOfPublish stringValue];
     
-    
-//         static NSString *cellMovies = @"cellForMovies";
-//         UITableViewCell *cell =
-    
-         movieCell.nameOfMovie.text = _moviesGlobal[indexPath.row].nameOfMovie;
-         movieCell.yearOfMovie.text = [_moviesGlobal[indexPath.row].yearOfPublish stringValue];
-    
-         return movieCell;
+        return movieCell;
 
 }
 

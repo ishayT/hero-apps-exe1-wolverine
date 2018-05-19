@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,33 +20,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="n2X-MM-wEM">
-                        <rect key="frame" x="16" y="11" width="288" height="22"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w5-7m-O1u" userLabel="nameOfMovie">
-                                <rect key="frame" x="0.0" y="0.0" width="216" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFc-7s-P9y" userLabel="year">
-                                <rect key="frame" x="216" y="0.0" width="72" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.396078431372549" green="0.69411764705882351" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w5-7m-O1u" userLabel="nameOfMovie">
+                        <rect key="frame" x="16" y="10" width="238" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFc-7s-P9y" userLabel="year">
+                        <rect key="frame" x="254" y="11" width="50" height="22"/>
                         <constraints>
-                            <constraint firstItem="2w5-7m-O1u" firstAttribute="width" secondItem="kFc-7s-P9y" secondAttribute="width" multiplier="3:1" id="hmD-1y-bJv"/>
+                            <constraint firstAttribute="height" constant="22" id="6TK-eN-D2b"/>
+                            <constraint firstAttribute="width" constant="50" id="ZDv-ve-7qB"/>
                         </constraints>
-                    </stackView>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.396078431372549" green="0.69411764705882351" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="n2X-MM-wEM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="DPg-ao-GxN"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="n2X-MM-wEM" secondAttribute="trailing" id="EAy-QS-0Wc"/>
-                    <constraint firstItem="n2X-MM-wEM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="gEv-xz-yNB"/>
-                    <constraint firstItem="n2X-MM-wEM" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="r7v-1m-tmh"/>
+                    <constraint firstItem="kFc-7s-P9y" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="7BK-Wj-gAc"/>
+                    <constraint firstItem="kFc-7s-P9y" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="MQd-eI-T3S"/>
+                    <constraint firstItem="kFc-7s-P9y" firstAttribute="leading" secondItem="2w5-7m-O1u" secondAttribute="trailing" id="UNO-ci-sHg"/>
+                    <constraint firstItem="2w5-7m-O1u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="b3I-gr-O4O"/>
+                    <constraint firstAttribute="bottom" secondItem="2w5-7m-O1u" secondAttribute="bottom" constant="11.5" id="huH-jU-LRz"/>
+                    <constraint firstItem="2w5-7m-O1u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="p9Y-P0-mZo"/>
+                    <constraint firstItem="kFc-7s-P9y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="znU-vJ-elc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
